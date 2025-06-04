@@ -6,15 +6,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lab 9: Error Handling Demo</title>
-  <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
-  <script>
 
-  window.TrackJS && TrackJS.install({ 
-    token: "b3003c3edcfa4453b3b10b84cf02f5ec"
-    // for more configuration options, see https://docs.trackjs.com
+  <!-- Load TrackJS agent FIRST -->
+  <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
+
+  <!--  Then call TrackJS.install -->
+  <script>
+    window.TrackJS && TrackJS.install({
+      token: "b3003c3edcfa4453b3b10b84cf02f5ec"
+      // for more configuration options, see https://docs.trackjs.com
     });
   </script>
 
+  <!-- Then your own JS -->
   <script src="script.js" defer></script>
 
   <style>
