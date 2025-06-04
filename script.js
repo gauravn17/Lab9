@@ -99,18 +99,19 @@ errorBtns[14].addEventListener('click', () => {
   nonexistentFunction();
 });
 
-// TRY/CATCH/FINALLY Example (OPTIONAL: you can also put in a button if you want)
-try {
-  let element = document.querySelector('#not-real-element');
-  console.log(element.innerText);  // Will throw if element is null
-} catch (err) {
-  console.error('Caught error in try/catch:', err);
-} finally {
-  console.log('Finally block ran.');
-}
+// 15 - Try/Catch Demo
+errorBtns[15].addEventListener('click', () => {
+  try {
+    let element = document.querySelector('#nonexistent');
+    console.log(element.innerText);  // Will throw if element is null
+  } catch (err) {
+    console.error('Caught error in try/catch:', err);
+  } finally {
+    console.log('Finally block ran.');
+  }
+});
 
-// THROW + CUSTOM ERROR Example
-
+// 16 - Throw Custom Error
 class MyCustomError extends Error {
   constructor(message) {
     super(message);
@@ -118,13 +119,11 @@ class MyCustomError extends Error {
   }
 }
 
-document.addEventListener('keydown', (event) => {
-  if (event.key === 'e') {
-    try {
-      throw new MyCustomError('Custom error triggered by key "e"');
-    } catch (err) {
-      console.error('Caught custom error:', err);
-    }
+errorBtns[16].addEventListener('click', () => {
+  try {
+    throw new MyCustomError('Custom error triggered from button');
+  } catch (err) {
+    console.error('Caught custom error:', err);
   }
 });
 
